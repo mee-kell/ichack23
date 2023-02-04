@@ -1,6 +1,6 @@
 import React from "react";
 
-class Projects extends React.Component {
+class Housing extends React.Component {
 
   render() {   
     return (
@@ -12,4 +12,4 @@ class Projects extends React.Component {
   }
 }
 
-export default Projects;
+export default Housing;
