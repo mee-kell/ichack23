@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { db } from '../firebase'
 import { collection, doc, getDocs, updateDoc } from "firebase/firestore";
+import Backend from '../Backend';
 
 const ProjectTable = () => {
 
@@ -47,6 +48,7 @@ const ProjectTable = () => {
                 <p>{project.desc}</p>
                 <p>{project.votes}</p>
                 <button onClick={() => upvote(project)}>Upvote</button>
+                <Backend subject={project.desc}/>
             </div>
         )
     }

@@ -55,9 +55,9 @@ const AddProject = () => {
               onChange={changeDescription}
             />
           </label>
-          <a class="nes-btn" href="#">
-            <input className="submitbtn" type="submit" value="Submit" />
-          </a>
+          {/* <a class="nes-btn" href="#"> */}
+            <input className="nes-btn" type="submit" value="Submit" />
+          {/* </a> */}
         </div>
       </form>
     );
