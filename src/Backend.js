@@ -79,7 +79,7 @@ const Backend = ({ subject }) => {
 
     const { Configuration, OpenAIApi } = require("openai");
 
-    const API_KEY = "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";
+    const API_KEY = "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";
 
     const configuration = new Configuration({
         apiKey: API_KEY,
