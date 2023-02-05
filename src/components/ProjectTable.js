@@ -8,17 +8,16 @@ const ProjectTable = () => {
     const [data, setData] = useState([]);
     const [entry, setEntry] = useState();
 
-    const getProjects = async () => {
-        await getDocs(collection(db, "projects"))
-            .then((querySnapshot) => {
-                const newData = querySnapshot.docs
-                    .map((doc) => ({ ...doc.data(), id: doc.id }));
-                setData(newData);
-                console.log(data, newData);
-            })
-    }
-
     useEffect(() => {
+        const getProjects = async () => {
+            await getDocs(collection(db, "projects"))
+                .then((querySnapshot) => {
+                    const newData = querySnapshot.docs
+                        .map((doc) => ({ ...doc.data(), id: doc.id }));
+                    setData(newData);
+                    // console.log(data, newData);
+                })
+        }
         getProjects();
     }, []);
 
