@@ -1,7 +1,6 @@
 body {
   margin: 0;
   font-family: 'Press Start 2P', sans-serif;
-
 }
 
 code {
@@ -29,7 +28,7 @@ code {
   width: 75%;
   margin: auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin-top: 4rem;
   margin-bottom: 4rem;
 }
@@ -60,7 +59,7 @@ code {
 }
 
 .display {
-  margin: 5rem;
+  /* margin: 5rem; */
 }
 
 #projectTitle {
@@ -70,4 +69,8 @@ code {
 #logo {
   width: 10rem;
   margin-bottom: 2rem;
+}
+
+#tower {
+  height: auto;
 }

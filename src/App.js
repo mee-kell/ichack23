@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './routes/Home';
 import Projects from './routes/Projects';
 import Housing from './routes/Housing';
+import tower from './assets/QTpixel.png'
 
 function App() {
 
