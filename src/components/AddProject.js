@@ -32,9 +32,10 @@ const AddProject = () => {
     }
     
     return (
+        <div className="nes-container is-rounded" id="suggestForm">
         <form className="addExperienceForm" onSubmit={submitProject}>
         <div class="nes-field">
-          <h1>Please add a project!</h1>
+          <h4>Suggest a project!</h4>
           <label>
             Title:
             <input
@@ -60,6 +61,7 @@ const AddProject = () => {
           {/* </a> */}
         </div>
       </form>
+      </div>
     );
 }
 

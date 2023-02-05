@@ -10,7 +10,8 @@ class Projects extends React.Component {
       <div className="Projects">
         <h1> Projects </h1>
         <ProjectTable />
-        <AddProject />
+            <AddProject />
+        
         {/* <Scraper/> */}
       </div>
     );

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 
 const Backend = ({ subject }) => {
 
+    // Import from data scraping colab
+
     const info = " Dr Dalal Alrajeh is interested in  Formal methods, software engineering, artificial intelligence for constructing correct software and their applications (e.g., software for digital forensics). \
     Dr Wenjia Bai is interested in  Medical Image Analysis and Understanding, Machine Learning. \
     Dr Francesco Belardinelli is interested in  Research Interest Logic and AI \
@@ -73,6 +75,10 @@ const Backend = ({ subject }) => {
     Prof. Pantelis J Beaghton is interested in  Programming Languages, Functional Programming, Category Theory \
     "
 
+    const grantham = "Dr Ajay Gambhir: Ajay's work focuses on the economics and policy of low-carbon technologies. \
+    Dr Ed Gryspeerdt: The research in Ed's group focuses on the physics and properties of clouds and their role in the Earth's climate system. A major part of this is in assessing changes in clouds and rain caused by particulates (known as aerosols), particularly from shipping and aviation. \
+    "
+
     const { Configuration, OpenAIApi } = require("openai");
 
     const API_KEY = "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";
@@ -111,7 +117,7 @@ const Backend = ({ subject }) => {
         try {
             const completion = await openai.createCompletion({
                 model: "text-davinci-002",
-                prompt: "Here is a list of people: " + info + "Who should I contact if I am interested in " + subject,
+                prompt: "Here is a list of people: " + info + grantham + "Who should I contact if I am interested in " + subject + "? Name: ",
                 temperature: 0.7,
                 max_tokens: 256,
                 top_p: 1,
@@ -131,9 +137,9 @@ const Backend = ({ subject }) => {
 
     return (
         <div>
-            <button onClick={askAdvice}>What are my next steps?</button>
+            <button onClick={askAdvice}>Next steps</button>
             <p>{reply}</p>
-            <button onClick={askPeople}>Who should I ask?</button>
+            <button onClick={askPeople}>Potential Advisors</button>
             <p>{person}</p>
         </div>
     )

@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Press Start 2P', sans-serif;
-  
+
 }
 
 code {
@@ -17,4 +17,43 @@ code {
 .submitbtn {
   border: 0px;
   background-color: transparent;
+}
+
+.table {
+  width: 75%;
+  margin: auto;
+  margin-top: 4rem;
+}
+
+#suggestForm {
+  width: 75%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+#suggestForm label {
+  margin-top: 5px;
+}
+
+#project-row {
+  margin: 2rem 0px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.projectDesc {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.votes {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  text-align: center;
 }

@@ -43,18 +43,23 @@ const ProjectTable = () => {
 
     const buildRow = (project) => {
         return (
-            <div>
-                <h3>{project.title}</h3>
+            <div className='nes-container with-title is-rounded is-dark' id='project-row'>
+                <h3 className="title">{project.title}</h3>
+                <div className="projectDesc">
                 <p>{project.desc}</p>
+                <div className="votes">
                 <p>{project.votes}</p>
-                <button onClick={() => upvote(project)}>Upvote</button>
+                <i class="nes-icon is-large heart" onClick={() => upvote(project)}></i>
+                </div>
+                </div>
                 <Backend subject={project.desc}/>
             </div>
         )
     }
 
     return (
-        <div className="table">
+        <div className="table nes-container with-title is-centered">
+             <p class="title">Suggested projects</p>
             {data.map((project, i) => buildRow(project))}
         </div>
     );
