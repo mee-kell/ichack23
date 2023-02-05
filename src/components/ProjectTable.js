@@ -24,7 +24,6 @@ const ProjectTable = () => {
 
     const upvote = (doc) => {
         setEntry(doc);
-        console.log(entry)
     }
 
     useEffect(() => {
@@ -36,6 +35,8 @@ const ProjectTable = () => {
             console.log(newVotes);
             await updateDoc(docRef, {
                 votes: newVotes
+            }).then(() => {
+                window.location.reload()
             });
         }
         fetchData();
@@ -44,7 +45,7 @@ const ProjectTable = () => {
     const buildRow = (project) => {
         return (
             <div className='nes-container with-title is-rounded is-dark' id='project-row'>
-                <h3 className="title">{project.title}</h3>
+                <h2 className="title" id="projectTitle">{project.title}</h2>
                 <div className="projectDesc">
                 <p>{project.desc}</p>
                 <div className="votes">

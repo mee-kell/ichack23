@@ -35,7 +35,8 @@ code {
 }
 
 #suggestForm label {
-  margin-top: 5px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 #project-row {
@@ -56,4 +57,17 @@ code {
   flex-direction: column;
   margin-left: 2rem;
   text-align: center;
+}
+
+.display {
+  margin: 5rem;
+}
+
+#projectTitle {
+  font-size: 1.3rem;
+}
+
+#logo {
+  width: 10rem;
+  margin-bottom: 2rem;
 }

@@ -1,18 +1,20 @@
 import React from "react";
 import ProjectTable from "../components/ProjectTable";
 import AddProject from "../components/AddProject";
-import Scraper from "../Scraper";
+import logo from '../assets/pxArt.png'
 
 class Projects extends React.Component {
 
   render() {   
     return (
       <div className="Projects">
-        <h1> Projects </h1>
+        <div className="header">
+            <img id="logo" src={logo} alt="logo"/>
+            <h1> CHOCS </h1>
+            <p>Community Hub of College Students</p>
+        </div>
+        <AddProject />
         <ProjectTable />
-            <AddProject />
-        
-        {/* <Scraper/> */}
       </div>
     );
   }

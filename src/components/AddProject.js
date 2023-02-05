@@ -24,6 +24,8 @@ const AddProject = () => {
               title: title,    
               desc: desc,
               votes: 0
+            }).then(() => {
+                window.location.reload()
             });
             console.log("Document written with ID: ", docRef.id);
           } catch (e) {

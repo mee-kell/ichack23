@@ -10,7 +10,7 @@ function App() {
 
   const routes = (
     <Routes className="appBody">
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Projects />} />
       <Route path="/projects" element={<Projects />} />
       <Route path="/housing" element={<Housing />} />
     </Routes>
@@ -18,7 +18,11 @@ function App() {
 
   return (
     <div className="App">
-      {routes}
+      <div className='display'>
+        {/* {routes} */}
+        <Projects/>
+      </div>
+      
     </div>
   );
 }

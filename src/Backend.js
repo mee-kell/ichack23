@@ -137,9 +137,9 @@ const Backend = ({ subject }) => {
 
     return (
         <div>
-            <button onClick={askAdvice}>Next steps</button>
+            <button class="nes-btn is-primary" onClick={askAdvice}>Next steps</button>
             <p>{reply}</p>
-            <button onClick={askPeople}>Potential Advisors</button>
+            <button class="nes-btn is-success" onClick={askPeople}>Potential Advisors</button>
             <p>{person}</p>
         </div>
     )
